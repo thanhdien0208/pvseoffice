@@ -1,0 +1,115 @@
+.popup {
+    display: none;
+    position: fixed;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    }
+.popup-content {
+    position: relative;
+    background-color: #FAFAFA;
+    padding: 15px;
+    margin: auto;
+    width: 30%;
+    box-shadow: 15px 15px 15px rgba(20, 20, 20, 0.466);
+    border-radius: 5px;
+    border: 1px solid #acacac;
+    }
+.close-btn {
+    float: right;
+    margin-top: 2px;
+    color:  #af0a0a;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    }
+.close-btn:hover {
+    color: #2E2E2E;
+    }
+.tile-popup {
+    padding: 5px;
+    font-size: 20px;
+    color: #3366cc;
+    font-weight: bold;
+    text-align: center;
+    }  
+.sig-tab {
+    margin-top: 20px;
+    align-items: center;
+    }
+
+.pad {
+    width: 300px;
+    height: 150px;
+    background-image: initial;
+    border: 2px dotted #CCCCCC;
+    border-radius: 15px;
+    cursor: crosshair;
+}
+
+#sig-image {
+    background-image: initial;
+    border: 1px solid #CCCCCC;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#sig-dataUrl {
+    display: none;
+}
+
+button {
+    border: 0;
+    outline: none;
+}
+
+.downloadBtn {
+    background-color: #c02020;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+.sig-submitBtn {
+    background-color: #33cc66;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.save-image {
+    background-color: #33a1cc;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.clear-button {
+    background-color: #c02020;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.contract-Code {
+    display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+    .popup-content {
+        width: 300px;
+        height: 300px;
+        }
+    #pad {
+        width: 280px;
+        height: 150px;
+    }
+  }

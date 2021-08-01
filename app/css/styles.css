@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+:root {
+    --main: #fbae17;
+    --bg: #0B1218;
+    --bg--body: #131D28;
+    --btn: #fbae17;
+    --conver-color: #0B1218;
+    --cloes: #fff;
+    --text: #f4f4fc;
+    --shadow: rgba(255, 255, 255, 0.2);
+    --titleview: #f4f4fc;
+    --view-color: #0B1218;
+    --gradient: linear-gradient(to right,
+            #fbae17,
+            #da2128);
+    --icon: #da2128;
+    --header: #000;
+    --gradient-form: linear-gradient(to right,
+            #da2128,
+            #fbae17);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked~.sidebar .brand a img {
+    height: 50px;
+    width: 50px;
+}
+
+#menu-toggle:checked~.sidebar .brand h2 {
+    display: none;
+}
+
+#menu-toggle:checked~.sidebar .side-img {
+    height: 50px;
+    width: 50px;
+}
+
+#menu-toggle:checked~.sidebar .user-role {
+    display: none;
+}
+
+#menu-toggle:checked~.sidebar li a span:last-child {
+    display: none;
+}
+
+#menu-toggle:checked~.sidebar {
+    width: 65px;
+}
+
+#menu-toggle:checked~.sidebar .tool .form-control {
+    margin-left: -0.1rem;
+}
+
+
+#menu-toggle:checked~.main-content {
+    margin-left: 65px;
+}
+
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background: var(--bg);
+    width: 280px;
+    overflow-y: auto;
+    transition: width 300ms;
+}
+
+.sidebar a{
+    text-decoration: none;
+}
+
+.menu-toggler {
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    border: 1px solid #fff;
+    display: grid;
+    place-content: center;
+    padding-left: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.menu-toggler:hover {
+    color: #fff;
+    background: var(--main);
+}
+
+.brand {
+    padding: 0.8rem;
+    display: flex;
+    color: #fff;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.brand span {
+    margin-right: .5rem;
+}
+
+.brand h2 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.brand .logo {
+    margin-left: 10px;
+}
+
+.side-user {
+    margin: 1rem 0rem;
+}
+
+.side-img {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 4px solid var(--main);
+}
+
+.user-role {
+    text-align: center;
+    color: #fff;
+    margin-top: .5rem;
+}
+
+.user-role small {
+    display: inline-block;
+    color: var(--main);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.sidemenu {
+    padding: .5rem;
+
+}
+
+.sidemenu li {
+    margin-bottom: .9rem;
+}
+
+.sidemenu a {
+    color: #fff;
+    font-size: .85rem;
+    display: flex;
+    align-items: center;
+    padding: .6rem 0rem;
+}
+
+.sidemenu a span:first-child {
+    font-size: 1.3rem;
+    padding: 0rem .6rem;
+}
+
+
+.sidebar a:focus {
+    outline: none;
+}
+
+
+.tool a:hover{
+    color: var(--main);
+}
+
+.tool .form-control{
+    width: 50px;
+    font-size: 13px;
+    padding: 5px;
+    margin-left: .7rem;
+    font-weight: bold;
+}
+.tool #font-size,
+.tool #brush-size {
+    padding-right: 5px;
+}
+
+.tool .color-tool {
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    padding-left: .5rem;
+    margin-top: 5px;
+}
+
+.tool a .tool-size span{
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ccc8c894;
+    min-width: 160px;
+    box-shadow: 0px 2px 5px var(--shadow);
+    z-index: 1;
+    padding: 3px;
+    border-radius: 6px;
+    margin-left: 50px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content button{
+    border: 0; 
+}
+
+.dropdown-content .color-tool{
+    margin-left: 3px;
+}
+.dropdown-content .color-tool:hover{
+    border: 2px solid var(--main);
+}
+
+.dropdown-content .tool-button{
+    display: inline-block;
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+}
+.dropdown-content .tool-button:hover{
+    border: 2px solid var(--main);
+}
+/* main-content */
+.main-content {
+    margin-left: 280px;
+    min-height: 100vh;
+    background: var(--bg--body);
+    padding: .5rem 1rem;
+    transition: margin-left 300ms;
+    position: relative;
+    transition: all 0.5s ease;
+    transition: background 0.3s;
+}
+
+
+main {
+    margin-top: 20px;
+    padding: 1rem 0rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+.la-times-circle {
+    font-size: 25px;
+    color: #fff;
+}
+/* end */
+
+canvas, .canvas-container {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+button:focus {
+    outline: 0;
+}
+
+
+/* @media only screen and (max-width: 600px) {
+
+    .main-content {
+        margin-left: 280px;
+        min-height: 100vh;
+        background: var(--bg--body);
+        padding: .5rem 1rem;
+        transition: margin-left 300ms;
+        position: relative;
+        transition: all 0.5s ease;
+        transition: background 0.3s;
+        overflow: auto;
+    }
+
+
+    main {
+        position: absolute;
+    }
+} */
